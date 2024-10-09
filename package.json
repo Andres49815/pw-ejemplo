@@ -1,0 +1,33 @@
+{
+  "name": "pw-ejemplo",
+  "version": "1.0.0",
+  "description": "Antes de empezar con la instalación del repositorio, necesitaremos instalar un par de herramientas: - [Node](https://nodejs.org/en/): Para desarrollar los servicios web. - [Postman](https://www.postman.com/downloads/): Para probar las solicitudes http que vamos a desarrollar. - [Instancia de mongo](https://www.mongodb.com/products/platform/atlas-database): Iniciar una instancia de mongo en mongo atlas o en cualquier otro servicio en la nube.  Adicionalmente, se puede instalar mongo atlas para más comodidad de realizar consultas.  Nota: Si tiene problemas para conectarse, verifique las reglas de seguridad como se vio en clase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andres49815/pw-ejemplo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andres49815/pw-ejemplo/issues"
+  },
+  "homepage": "https://github.com/Andres49815/pw-ejemplo#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
