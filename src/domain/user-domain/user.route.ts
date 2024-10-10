@@ -18,6 +18,16 @@ UsersRoute.get('/', async (request, response, next) => {
   }
 });
 
+UsersRoute.get('/:userId', async (request, response, next) => {
+  try {
+    const user = await userService.getUserById(request.params.userId);
+    response.status(200).json(user);
+  }
+  catch (error) {
+    response.status(404).json({ message: (error as any).message });
+  }
+});
+
 UsersRoute.post('/', async (request, response, next) => {
   try {
     const createdUser = await userService.createUser(request.body);

@@ -12,7 +12,8 @@ export class UserRepository {
   }
 
   public async getUserById(userId: string): Promise<UserWithId | null> {
-    return null;
+    const user = await this._userModel.findOne({ id: userId }).lean().exec();
+    return user as UserWithId;
   }
 
   public async getUsers(): Promise<UserWithId[]> {

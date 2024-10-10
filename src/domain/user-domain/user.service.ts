@@ -22,6 +22,15 @@ export class UserService {
 
     await this._userRepository.createUser(userWithId);
     return userWithId;
-  } 
+  }
+
+  public async getUserById(id: string): Promise<UserWithId> {
+    const user = await this._userRepository.getUserById(id);
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    return user;
+  }
 
 } 
